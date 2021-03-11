@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The PixelExperience Project
+# Copyright (C) 2019-2021 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 PRODUCT_NAME := aosp_jd2019
 PRODUCT_BRAND := lenovo
 PRODUCT_DEVICE := jd2019
-PRODUCT_MANUFACTURER := lenovo
-PRODUCT_MODEL := Lenovo Z5s
+PRODUCT_MANUFACTURER := Lenovo
+PRODUCT_MODEL := Z5s
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
