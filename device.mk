@@ -75,9 +75,6 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     libhidltransport
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor_override_manifest.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/vendor_override_manifest.xml
-
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -107,7 +104,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.lenovo
+    android.hardware.power@1.3-service.lenovo-libperfmgr \
+    android.hardware.power.stats@1.0-service.lenovo
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_SYSTEM)/etc/powerhint.json
@@ -121,7 +119,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/interfaces \
     hardware/google/pixel
 
 # System properties

@@ -20,6 +20,7 @@ allow hal_power_pixel sysfs_graphics:file r_file_perms;
 
 allow hal_power_pixel sysfs_rpm:file r_file_perms;
 allow hal_power_pixel sysfs_system_sleep_stats:file r_file_perms;
+allow hal_power_pixel sysfs_power_stats:file r_file_perms;
 
 r_dir_file(hal_power, sysfs_tp)
 allow hal_power_pixel sysfs_tp:file write;
@@ -43,10 +44,8 @@ allow hal_power_pixel input_device:chr_file rw_file_perms;
 
 allow hal_power_pixel hal_power_hwservice:hwservice_manager add;
 allow hal_power_pixel hidl_base_hwservice:hwservice_manager add;
-allow hal_power_pixel hal_power_service:service_manager add;
 binder_call(hal_power_pixel, hwservicemanager)
 binder_call(hal_power_pixel, hal_audio)
-binder_call(hal_power_pixel, servicemanager);
 
 # To get hwservicemanager state
 get_prop(hal_power_pixel, hwservicemanager_prop)
